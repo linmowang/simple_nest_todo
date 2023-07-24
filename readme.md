@@ -24,3 +24,8 @@
 2. 实现 LocalAuthGuard 全局守护接口验证问题， 开启所有接口 jwt 验证
 3. 添加接口/api/login 登录获得授权
 4. 添加接口/api/profile 授权后获得用户信息
+
+5. 阅读https://docs.nestjs.com/recipes/passport文档 使用 passport 重构 auth 模块
+6. 登录接口/api/login 走 LocalAuthGuard 策略
+7. 其他需要登录态的接口 走 JwtAuthGuard
+8. 不需要登录态的接口 @SkipJwtAuth()
