@@ -30,6 +30,8 @@ const useAuth = (): Auth => {
 
     setToken(token);
     setIsAdmin(user.is_admin);
+
+    return true;
   };
 
   const loginOut = async () => {

@@ -33,8 +33,16 @@
 第三天:
 
 #client:
+1.login 页面 登录实现
 
 #server:
 1.user 实体构建 包含 entity 映射数据库
 2.user 模块的增删改查
 3.auth 相关 user 逻辑修改
+4.cors 解决跨越问题，让前端可以调接口
+5.transform TransformInterceptor 实现接口返回拦截功能
+
+备忘录:
+role.guard 逻辑
+logger
+inter

@@ -1,6 +1,7 @@
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
+import { TransformInterceptor } from './transform/transform.interceptor';
 
 const setUpSwagger = (app) => {
   const config = new DocumentBuilder()
@@ -15,7 +16,17 @@ const setUpSwagger = (app) => {
 };
 
 async function bootstrap() {
-  const app = await NestFactory.create(AppModule);
+  const app = await NestFactory.create(AppModule, {
+    cors: {
+      origin: ['http://localhost', 'http://localhost:3000'],
+      credentials: true,
+    },
+    // bufferLogs: true,
+    // logger: reportLogger
+  });
+
+  app.setGlobalPrefix('api');
+  app.useGlobalInterceptors(new TransformInterceptor());
 
   setUpSwagger(app);
   await app.listen(4200);
