@@ -29,3 +29,12 @@
 6. 登录接口/api/login 走 LocalAuthGuard 策略
 7. 其他需要登录态的接口 走 JwtAuthGuard
 8. 不需要登录态的接口 @SkipJwtAuth()
+
+第三天:
+
+#client:
+
+#server:
+1.user 实体构建 包含 entity 映射数据库
+2.user 模块的增删改查
+3.auth 相关 user 逻辑修改
