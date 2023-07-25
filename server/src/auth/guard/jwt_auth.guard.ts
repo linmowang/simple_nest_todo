@@ -23,18 +23,19 @@ export class JwtAuthGuard extends AuthGuard('jwt') {
       context.getClass(),
     ]);
 
+    console.log('isPublic:', isPublic);
+
     // skip
     if (isPublic) return true;
-
     return super.canActivate(context);
   }
 
-  hendleRequest(err, user) {
-    // 处理info
-    if (err || !user) {
-      throw err || new UnauthorizedException();
-    }
+  // hendleRequest(err, user) {
+  //   // 处理info
+  //   if (err || !user) {
+  //     throw err || new UnauthorizedException();
+  //   }
 
-    return user;
-  }
+  //   return user;
+  // }
 }

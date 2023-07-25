@@ -29,6 +29,7 @@ export class AuthService {
 
   async login(user: any) {
     const { password, ...resetUser } = user;
+
     const payload = { ...resetUser, sub: user.id };
 
     return {

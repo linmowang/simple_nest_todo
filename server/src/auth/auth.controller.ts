@@ -10,6 +10,7 @@ import { AuthService } from './auth.service';
 import { SkipJwtAuth } from './contants';
 import { ApiTags } from '@nestjs/swagger';
 import { LocalAuthGuard } from './guard/local_auth.guard';
+import { JwtAuthGuard } from './guard/jwt_auth.guard';
 
 @ApiTags('登录验证')
 @Controller('auth')
@@ -19,10 +20,11 @@ export class AuthController {
   @SkipJwtAuth()
   @UseGuards(LocalAuthGuard)
   @Post('login')
-  signIn(@Body() signInDto: Record<string, any>) {
-    return this.authService.login(signInDto.username, signInDto.password);
+  async login(@Request() req) {
+    return this.authService.login(req.user);
   }
 
+  @UseGuards(JwtAuthGuard)
   @Get('profile')
   getProfile(@Request() req) {
     return {
