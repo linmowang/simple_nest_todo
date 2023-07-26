@@ -6,6 +6,8 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { UserModule } from './user/user.module';
 import { TodoModule } from './todo/todo.module';
 import { AuthModule } from './auth/auth.module';
+import { UploadModule } from './upload/upload.module';
+import { StaticModule } from './static/static.module';
 
 @Module({
   imports: [
@@ -23,6 +25,8 @@ import { AuthModule } from './auth/auth.module';
     UserModule,
     TodoModule,
     AuthModule,
+    UploadModule,
+    StaticModule,
   ],
   controllers: [AppController],
   providers: [AppService],

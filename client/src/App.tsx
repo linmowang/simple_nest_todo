@@ -14,7 +14,6 @@ import AuthContext from "./context/AuthContext";
 
 const App: FC = () => {
   const auth = useAuth();
-  console.log("auth:", auth);
 
   const router = createBrowserRouter([
     {

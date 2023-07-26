@@ -1,6 +1,7 @@
 import React, { FC, useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import AuthContext from "../../context/AuthContext";
+import http from "../../http";
 
 const Login: FC = () => {
   const navigate = useNavigate();
@@ -10,8 +11,8 @@ const Login: FC = () => {
   });
   const [msg, setMsg] = useState("");
   const auth = useContext(AuthContext);
-  const login = () => {
-    const isLogin = auth.login({ ...authForm });
+  const login = async () => {
+    const isLogin = await auth.login({ ...authForm });
     if (isLogin) {
       setMsg("登录成功");
       navigate("/");
@@ -19,9 +20,17 @@ const Login: FC = () => {
       setMsg("登录失败");
     }
   };
+
+  // const getProfile = async () => {
+  //   const result = await http.get("/auth/profile");
+  //   console.log(result);
+  // };
+
   return (
     <div>
       <h1>登录页</h1>
+
+      {/* <button onClick={getProfile}>测试profile</button> */}
 
       {msg && <p style={{ color: "red" }}>{msg}</p>}
       <div>

@@ -18,20 +18,26 @@ const useAuth = (): Auth => {
   );
 
   const login = async (data: any) => {
-    const response = await http.post("/auth/login", data);
+    try {
+      const response = await http.post("/auth/login", data);
 
-    const { token, user, expiresIn } = response.data;
-    const tokenExpiredTime = Date.now() + expiresIn * 60 * 1000;
+      const { token, user, expiresIn } = response.data;
+      const tokenExpiredTime = Date.now() + expiresIn * 60 * 1000;
 
-    // 本地存储
-    localStorage.setItem("token", token);
-    localStorage.setItem("token_expire", tokenExpiredTime.toString());
-    localStorage.setItem("is_admin", user.is_admin);
+      // 本地存储
+      localStorage.setItem("token", token);
+      localStorage.setItem("token_expire", tokenExpiredTime.toString());
+      localStorage.setItem("is_admin", user.is_admin);
+      localStorage.setItem("user", JSON.stringify(user));
 
-    setToken(token);
-    setIsAdmin(user.is_admin);
+      setToken(token);
+      setIsAdmin(user.is_admin);
 
-    return true;
+      return true;
+    } catch (e) {
+      console.error(e);
+      return false;
+    }
   };
 
   const loginOut = async () => {

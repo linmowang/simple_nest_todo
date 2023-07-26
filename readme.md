@@ -48,11 +48,25 @@
 
 #client:
 
+1. Todo 页面
+2. 完善 media 内容
+
 #server:
 
 1. 日志功能 reportLogger 模块
 2. 异常 Filters
 3. todo 功能实现
+4. 上传文件
+
+第五天
+
+#client:
+
+1.
+
+#server:
+
+1.
 
 备忘录:
 
@@ -60,11 +74,9 @@
 2. redis 页面访问次数统计
 3. quote
 4. chat
-5. static
-6. upload
-7. test
-8. docket
-9. 数据库
-10. 线上部署
-11. rxjs
-12. log 没有生成文件保存起来
+5. test
+6. docker
+7. 数据库
+8. 线上部署
+9. rxjs
+10. log 没有生成文件保存起来
