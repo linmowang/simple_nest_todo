@@ -26,6 +26,17 @@ export class UserService {
     return await this.userRepository.find();
   }
 
+  async findOneById(id: number) {
+    return await this.userRepository.findOne({ where: { id } });
+  }
+
+  async findOneByIdToTodos(id: number) {
+    return await this.userRepository.findOne({
+      relations: ['todos'],
+      where: { id },
+    });
+  }
+
   async findOne(id: number): Promise<Omit<User, 'password'>> {
     const result = await this.userRepository.findOne({ where: { id } });
     const { password: ignorePass, ...resetUser } = result;

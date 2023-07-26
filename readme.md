@@ -33,16 +33,38 @@
 第三天:
 
 #client:
-1.login 页面 登录实现
+
+1. login 页面 登录实现
 
 #server:
-1.user 实体构建 包含 entity 映射数据库
-2.user 模块的增删改查
-3.auth 相关 user 逻辑修改
-4.cors 解决跨越问题，让前端可以调接口
-5.transform TransformInterceptor 实现接口返回拦截功能
+
+1. user 实体构建 包含 entity 映射数据库
+2. user 模块的增删改查
+3. auth 相关 user 逻辑修改
+4. cors 解决跨越问题，让前端可以调接口
+5. transform TransformInterceptor 实现接口返回拦截功能
+
+第四天
+
+#client:
+
+#server:
+
+1. 日志功能 reportLogger 模块
+2. 异常 Filters
+3. todo 功能实现
 
 备忘录:
-role.guard 逻辑
-logger
-inter
+
+1. role.guard 逻辑
+2. redis 页面访问次数统计
+3. quote
+4. chat
+5. static
+6. upload
+7. test
+8. docket
+9. 数据库
+10. 线上部署
+11. rxjs
+12. log 没有生成文件保存起来

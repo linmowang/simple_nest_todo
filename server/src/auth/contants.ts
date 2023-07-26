@@ -2,7 +2,7 @@ import { SetMetadata } from '@nestjs/common';
 
 export const jwtConstants = {
   secret: 'jwtsecret',
-  expiresIn: '3600s',
+  expiresIn: '3',
 };
 
 export const IS_PUBLIC_KEY = 'isPublic';
