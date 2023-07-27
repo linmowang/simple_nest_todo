@@ -8,6 +8,9 @@ import { TodoModule } from './todo/todo.module';
 import { AuthModule } from './auth/auth.module';
 import { UploadModule } from './upload/upload.module';
 import { StaticModule } from './static/static.module';
+import { CountModule } from './count/count.module';
+import { QuoteModule } from './quote/quote.module';
+import { ChatModule } from './chat/chat.module';
 
 @Module({
   imports: [
@@ -27,6 +30,9 @@ import { StaticModule } from './static/static.module';
     AuthModule,
     UploadModule,
     StaticModule,
+    CountModule,
+    QuoteModule,
+    ChatModule,
   ],
   controllers: [AppController],
   providers: [AppService],

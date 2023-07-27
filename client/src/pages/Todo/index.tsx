@@ -59,15 +59,19 @@ const TodoELement: FC = () => {
     <div>
       {loading && <div>loading</div>}
       <div>
-        {user && <p>当前用户{user.username}</p>}
-        <button
-          onClick={() => {
-            auth.loginOut();
-            navigate("/login");
-          }}
-        >
-          退出登录
-        </button>
+        {user && (
+          <p>
+            welcome! 当前用户{user.username}{" "}
+            <button
+              onClick={() => {
+                auth.loginOut();
+                navigate("/login");
+              }}
+            >
+              退出登录
+            </button>{" "}
+          </p>
+        )}
 
         {/* 新增待办 */}
         <div>

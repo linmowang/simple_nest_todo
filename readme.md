@@ -62,21 +62,22 @@
 
 #client:
 
-1.
+1. 访问量显示
+2. 每日名言显示
+3. chat 聊天室
 
 #server:
 
-1.
+1. count 统计访问量并使用 redis
+2. quote 调用外部 api
+3. chat websocket 聊天室
 
 备忘录:
 
 1. role.guard 逻辑
-2. redis 页面访问次数统计
-3. quote
-4. chat
-5. test
-6. docker
-7. 数据库
-8. 线上部署
-9. rxjs
-10. log 没有生成文件保存起来
+2. test
+3. docker
+4. 数据库
+5. 线上部署
+6. rxjs
+7. log 没有生成文件保存起来
