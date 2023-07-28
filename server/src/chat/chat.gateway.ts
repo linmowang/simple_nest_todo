@@ -8,7 +8,7 @@ import { Server } from 'socket.io';
 import { MessageData } from './chat.interface';
 import { Cron, CronExpression } from '@nestjs/schedule';
 import { UseGuards } from '@nestjs/common';
-import { WsJwtAuthGuard } from 'src/auth/guard/ws_jwt_auth.guard';
+import { WsJwtAuthGuard } from '../auth/guard/ws_jwt_auth.guard';
 
 @WebSocketGateway({
   path: '/chat/socket.io',

@@ -30,6 +30,10 @@ export class UserService {
     return await this.userRepository.findOne({ where: { id } });
   }
 
+  async checkAdmin(id: number) {
+    return await this.userRepository.findOne({ where: { id, is_admin: 1 } });
+  }
+
   async findOneByIdToTodos(id: number) {
     return await this.userRepository.findOne({
       relations: ['todos'],

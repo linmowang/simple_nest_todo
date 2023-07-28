@@ -2,7 +2,7 @@ import React, { FC, useContext, useEffect, useState } from "react";
 import http from "../../http";
 import AuthContext from "../../context/AuthContext";
 import { Todo, FormType } from "../../types/Todo";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import TodoForm from "./TodoForm";
 
 const TodoELement: FC = () => {
@@ -58,6 +58,11 @@ const TodoELement: FC = () => {
   return (
     <div>
       {loading && <div>loading</div>}
+      {auth.isAdmin && (
+        <header style={{ marginTop: "20px", marginBottom: "20px" }}>
+          <Link to="/admin">管理员页面</Link>
+        </header>
+      )}
       <div>
         {user && (
           <p>

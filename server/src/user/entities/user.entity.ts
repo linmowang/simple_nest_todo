@@ -8,22 +8,28 @@ import {
   PrimaryGeneratedColumn,
 } from 'typeorm';
 import { Todo } from '../../todo/entities/todo.entity';
+import { ApiProperty } from '@nestjs/swagger';
 
 @Entity()
 export class User {
+  @ApiProperty()
   @PrimaryGeneratedColumn()
   id: number;
 
+  @ApiProperty()
   @Column({ length: 500 })
   username: string;
 
+  @ApiProperty()
   @Exclude()
   @Column({ length: 500 })
   password: string;
 
+  @ApiProperty()
   @Column({ length: 500 })
   email: string;
 
+  @ApiProperty()
   @Column('int', { default: 1 })
   is_admin?: number;
 

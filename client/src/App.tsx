@@ -1,13 +1,14 @@
 import React, { FC, useState, useEffect } from "react";
 import {
   createBrowserRouter,
+  Link,
   RouterProvider,
   // Route,
-  // Link,
 } from "react-router-dom";
 import "./App.css";
 import Todo from "./pages/Todo";
 import Login from "./pages/Login";
+import Admin from "./pages/Admin";
 
 import useAuth from "./hooks/useAuth";
 import AuthContext from "./context/AuthContext";
@@ -45,6 +46,10 @@ const App: FC = () => {
     {
       path: "/login",
       element: <Login />,
+    },
+    {
+      path: "/admin",
+      element: <Admin />,
     },
   ]);
 

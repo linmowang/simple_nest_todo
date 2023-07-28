@@ -2,7 +2,7 @@ import { HttpService } from '@nestjs/axios';
 import { Controller, Get } from '@nestjs/common';
 import { ApiTags } from '@nestjs/swagger';
 import { lastValueFrom } from 'rxjs';
-import { SkipJwtAuth } from 'src/auth/contants';
+import { SkipJwtAuth } from '../auth/contants';
 
 const randomQuoteApi = 'http://api.quotable.io/random';
 

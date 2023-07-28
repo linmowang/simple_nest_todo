@@ -4,7 +4,7 @@ import { UpdateTodoDto } from './dto/update-todo.dto';
 import { Todo, TodoStatus } from './entities/todo.entity';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
-import { UserService } from 'src/user/user.service';
+import { UserService } from '../user/user.service';
 
 @Injectable()
 export class TodoService {

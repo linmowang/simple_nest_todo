@@ -2,7 +2,7 @@ import { CACHE_MANAGER } from '@nestjs/cache-manager';
 import { Controller, Get, Inject, Post, Delete } from '@nestjs/common';
 import { ApiTags } from '@nestjs/swagger';
 import { Cache } from 'cache-manager';
-import { SkipJwtAuth } from 'src/auth/contants';
+import { SkipJwtAuth } from '../auth/contants';
 
 @ApiTags('访问量')
 @SkipJwtAuth()

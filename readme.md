@@ -72,10 +72,17 @@
 2. quote 调用外部 api
 3. chat websocket 聊天室
 
+第六天
+#client:
+#server:
+
+1. role.guard 管理员权限逻辑
+2. swagger
+3. test 逻辑太乱，bug 太多，需要找到更好更新的最佳实践
+4. docker 还没写
+
 备忘录:
 
-1. role.guard 逻辑
-2. test
 3. docker
 4. 数据库
 5. 线上部署
