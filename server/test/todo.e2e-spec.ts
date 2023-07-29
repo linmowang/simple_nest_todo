@@ -19,7 +19,7 @@ describe('TodoController (e2e)', () => {
     host: '127.0.0.1',
     port: 3306,
     username: 'root',
-    password: 'abc123',
+    password: '123456',
     database: 'nest_todo',
     entities: [User, Todo],
   });

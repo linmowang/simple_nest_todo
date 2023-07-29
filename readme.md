@@ -79,12 +79,5 @@
 1. role.guard 管理员权限逻辑
 2. swagger
 3. test 逻辑太乱，bug 太多，需要找到更好更新的最佳实践
-4. docker 还没写
-
-备忘录:
-
-3. docker
-4. 数据库
-5. 线上部署
-6. rxjs
-7. log 没有生成文件保存起来
+4. docker 要先关掉 3306 和 6379 端口 sudo kill `sudo lsof -t -i:3306`, 本地运行环境会跟 docker 冲突,还是找更好的实践吧
+5. 完结吧
